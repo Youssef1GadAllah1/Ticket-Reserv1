@@ -12,32 +12,38 @@ namespace Ticket_Reservation
     abstract internal class Events
     {
         public string Name;
-        public int Time;
-        protected int Startevent;
-        protected int Endevent;
+        public string Time;
+        protected string Startevent;
+        protected string Endevent;
         // methods
-        public abstract void SetTime(int time);
+        public abstract void SetTime(string time);
 
 
 
-        public abstract int GetTime();
+        public abstract string GetTime();
 
         public abstract void SetName(string name);
 
 
         public abstract string GetName();
 
-        public virtual int GetStartEvent()
+        public virtual string GetStartEvent()
         {
             return Startevent;
         }
-        public virtual int GetEndEvent()
+        public virtual void SetStartEvent(string strartEvent)
+        {
+            Startevent = strartEvent;
+        }
+        public virtual void SetEndEvent(string endEvent)
+        {
+            Endevent = endEvent;
+        }
+        public virtual string GetEndEvent()
         {
             return Endevent;
         }
-        public abstract int StartEvent(int startevent);
-
-        public abstract int EndEvent(int endevent);
+        
 
     }
 }

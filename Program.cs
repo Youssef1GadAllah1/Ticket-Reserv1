@@ -78,7 +78,7 @@ namespace Ticket_Reservation
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Field Reservation Ticket");
+                                    Console.WriteLine("Failed Reservation Ticket");
                                 }
                             }
                             break;
@@ -127,7 +127,7 @@ namespace Ticket_Reservation
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Field Reservation Ticket");
+                                    Console.WriteLine("Failed Reservation Ticket");
                                 }
                             }
                             break;
@@ -172,7 +172,7 @@ namespace Ticket_Reservation
                             }
                             else
                             {
-                                Console.WriteLine("Field Reservation Ticket");
+                                Console.WriteLine("Failed Reservation Ticket");
                             }
                             
                             break;
@@ -208,7 +208,7 @@ namespace Ticket_Reservation
                             }
                                 else
                                 {
-                                    Console.WriteLine("Field Reservation Ticket");
+                                    Console.WriteLine("Failed Reservation Ticket");
                                 }
                             
                             
@@ -245,7 +245,7 @@ namespace Ticket_Reservation
 
             else
             {
-                Console.WriteLine("Field");
+                Console.WriteLine("Failed");
             }
             if (IsFound == true)
             {
@@ -266,32 +266,32 @@ namespace Ticket_Reservation
                                 Console.WriteLine("Enter Name Film");
                                 string Name = Console.ReadLine();
                                 Console.WriteLine("Enter Time of Film");
-                                int time = int.Parse(Console.ReadLine());
+                                string time = Console.ReadLine();
                                 Console.WriteLine("Enter Start Time Film");
-                                int Start = int.Parse(Console.ReadLine());
+                                string Start = Console.ReadLine();
                                 Console.WriteLine("Enter End Time Film");
-                                int end = int.Parse(Console.ReadLine());
+                                string end = Console.ReadLine();
                                 Movie movie = new Movie();
                                 movie.SetName(Name);
                                 movie.SetTime(time);
-                                movie.StartEvent(Start);
-                                movie.EndEvent(end);
+                                movie.SetStartEvent(Start);
+                                movie.SetEndEvent(end);
                                 movies.AddLast(movie);
                                 break;
                             case 2:
                                 Console.WriteLine("Enter Name Concert");
                                 string Name1 = Console.ReadLine();
                                 Console.WriteLine("Enter Time of Concert");
-                                int time1 = int.Parse(Console.ReadLine());
+                                string time1 = Console.ReadLine();
                                 Console.WriteLine("Enter Start Time Concert");
-                                int Start1 = int.Parse(Console.ReadLine());
+                                string Start1 = Console.ReadLine();
                                 Console.WriteLine("Enter End Time Concert");
-                                int end1 = int.Parse(Console.ReadLine());
+                                string end1 = Console.ReadLine();
                                 Concerts concert = new Concerts();
                                 concert.SetName(Name1);
                                 concert.SetTime(time1);
-                                concert.StartEvent(Start1);
-                                concert.EndEvent(end1);
+                                concert.SetStartEvent(Start1);
+                                concert.SetEndEvent(end1);
                                 concerts.AddLast(concert);
                                 break;
 
@@ -312,11 +312,11 @@ namespace Ticket_Reservation
                                 Console.WriteLine("Enter Name Film");
                                 string Name = Console.ReadLine();
                                 Console.WriteLine("Enter Time of Film");
-                                int time = int.Parse(Console.ReadLine());
+                                string time = Console.ReadLine();
                                 Console.WriteLine("Enter Start Time Film");
-                                int Start = int.Parse(Console.ReadLine());
+                                string Start = Console.ReadLine();
                                 Console.WriteLine("Enter End Time Film");
-                                int end = int.Parse(Console.ReadLine());
+                                string end = Console.ReadLine();
                                 bool IsF = false;
                                 Movie movie = new Movie();
 
@@ -333,14 +333,14 @@ namespace Ticket_Reservation
                                 {
                                     movie.SetName(Name);
                                     movie.SetTime(time);
-                                    movie.StartEvent(Start);
+                                    movie.SetStartEvent(Start);
                                     movie.EndEvent(end);
                                     movies.Remove(movie);
                                     Console.WriteLine("Successfully Remove");
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Field Film");
+                                    Console.WriteLine("Failed Film");
                                 }
                                 break;
                             case 2:
@@ -352,11 +352,11 @@ namespace Ticket_Reservation
                                 Console.WriteLine("Enter Name Concert");
                                 string Name1 = Console.ReadLine();
                                 Console.WriteLine("Enter Time of Concert");
-                                int time1 = int.Parse(Console.ReadLine());
+                                string time1 = Console.ReadLine();
                                 Console.WriteLine("Enter Start Time Concert");
-                                int Start1 = int.Parse(Console.ReadLine());
+                                string Start1 = Console.ReadLine();
                                 Console.WriteLine("Enter End Time Concert");
-                                int end1 = int.Parse(Console.ReadLine());
+                                string end1 = Console.ReadLine();
                                 bool IsC = false;
                                 Concerts concert = new Concerts();
 
@@ -372,14 +372,14 @@ namespace Ticket_Reservation
                                 {
                                     concert.SetName(Name1);
                                     concert.SetTime(time1);
-                                    concert.StartEvent(Start1);
-                                    concert.EndEvent(end1);
+                                    concert.SetStartEvent(Start1);
+                                    concert.SetEndEvent(end1);
                                     concerts.Remove(concert);
                                     Console.WriteLine("Successfully Remove");
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Field Concert");
+                                    Console.WriteLine("Failed Concert");
                                 }
                                 break;
                         }

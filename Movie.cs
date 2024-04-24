@@ -10,19 +10,15 @@ namespace Ticket_Reservation
 {
     internal class Movie : Events
     {
-        public void Film()
-        {
-            Console.WriteLine($"Name:{Name} Expiry time {Time} Srart Film: {Startevent} End Film {Endevent}");
 
-        }
-        public override void SetTime(int time)
+        public override void SetTime(string time)
         {
             Time = time;
         }
 
 
 
-        public override int GetTime()
+        public override string GetTime()
         {
             return Time;
         }
@@ -38,24 +34,26 @@ namespace Ticket_Reservation
             return Name;
         }
 
-        public override int GetStartEvent()
+        public override string GetStartEvent()
         {
             return Startevent;
         }
-        public override int GetEndEvent()
+        public override void SetStartEvent(string strartEvent)
+        {
+            Startevent = strartEvent;
+        }
+        public override void SetEndEvent(string endEvent)
+        {
+            Endevent = endEvent;
+        }
+        public override string GetEndEvent()
         {
             return Endevent;
-        }
-        public override int StartEvent(int startevent)
-        {
-            Startevent = startevent;
-            return Startevent;
         }
 
-        public override int EndEvent(int endevent)
+        internal void EndEvent(string end)
         {
-            Endevent = endevent;
-            return Endevent;
+            throw new NotImplementedException();
         }
     }
 }

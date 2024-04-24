@@ -28,14 +28,14 @@ namespace Ticket_Reservation
             return Password;
         }
 
-        public void AddTime_NameMovie(int time, string name)
+        public void AddTime_NameMovie(string time, string name)
         {
             Movie movie = new Movie();
             movie.SetTime(time);
             movie.SetName(name);
         }
 
-        public void AddTime_NameConcert(int time, string name)
+        public void AddTime_NameConcert(string time, string name)
         {
             Concerts concert = new Concerts();
             concert.SetTime(time);
